@@ -1,0 +1,20 @@
+
+#tronchi:
+  ul:
+    padding: 1px
+    overflow: auto
+    margin: 0
+    list-style-type: none
+    li:
+      background: $background - 90
+      height: 325px
+      margin: .2em
+      padding: 0 .5em
+      position: relative
+      float: left
+      -moz-border-radius: 1em
+      a:
+        color: $background + 90
+      .nick:
+        font-size: 1.2em
+      

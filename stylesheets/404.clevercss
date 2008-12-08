@@ -1,0 +1,7 @@
+#page404:
+  h1, #menu:
+    display:none
+  #page:
+    background: transparent
+    text-align: center
+    margin-left: 0
