@@ -1,13 +1,15 @@
 require 'yaml'
 require 'open-uri'
 
+USERS_YML = 'http://edit.sunfox.org/escalope.yml/txt'
+
 # Monkey-hash so that h.foo actually does h["foo"]
 class Hash
   def method_missing(s) self[s.to_s] end
 end
 
 # Get users
-users = YAML.load(open('http://edit.sunfox.org/escalope.yml.txt'))
+users = YAML.load(open(USERS_YML))
 users.each do |id, user|
   users[id] ||= {}
   users[id]['image'] ||= File.exists?("images/tronches/#{id}.jpg") ? \
