@@ -12,8 +12,15 @@ end
 users = YAML.load(open(USERS_YML))
 users.each do |id, user|
   users[id] ||= {}
-  users[id]['image'] ||= File.exists?("images/tronches/#{id}.jpg") ? \
-    "/images/tronches/#{id}.jpg" : "/scripts/google-image.php?q=#{id}&amp;cache=0"        #' style='opacity:.3'"
+  users[id]['nick'] ||= id
+
+  Thread.new(id) {
+    `#{File.dirname(__FILE__)}/lucky-image '#{id}' > 'images/tronches/lucky/#{id}'`
+  }
+
+  #users[id]['image'] ||= File.exists?("images/tronches/#{id}.jpg") ? \
+  #  "/images/tronches/#{id}.jpg" : "/scripts/google-image.php?q=#{id}&amp;cache=0"
+  users[id]['image'] = "/images/tronches/lucky/#{id}"
   users[id]['nick'] ||= id
 end
 users = users.sort_by { |id, user| user.nick.downcase }
