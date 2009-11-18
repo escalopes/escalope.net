@@ -29,6 +29,7 @@ a:
   list-style: none
   position: absolute
   top: 180px
+  color: $background - 30
 
 #page:
   margin-left: 280px
