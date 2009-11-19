@@ -29,5 +29,5 @@ new TWTR.Widget({
     avatars: true,
     behavior: 'all'
   }
-}).render().setList('webs', 'threesome').start();
+}).render().setList('webs', 'escalopes').start();
 </script>
