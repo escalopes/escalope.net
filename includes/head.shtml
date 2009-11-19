@@ -1,7 +1,6 @@
 <!--#config errmsg="[SSI FAIL!1]" -->
 <!--#config timefmt="%A %B %d %Y at %H:%M:%S" -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-  "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
   <!--#if expr="${page_title}" -->
