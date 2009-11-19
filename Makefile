@@ -1,4 +1,4 @@
-all: css perles tronchi 404
+all: css perles tronchi
 
 #crowd: escalope.n3 scripts/sparql.py scripts/sparql_to_hcard.xsl
 #	python scripts/sparql.py > crowd.xml
@@ -11,8 +11,6 @@ css:
 	python scripts/cssgen.py stylesheets/*.clevercss > stylesheets/escalope.css
 perles:
 	ruby scripts/perles.rb > perles.shtml
-404:
-	sh scripts/gen_404.sh > 404.shtml
 
 clean:
 	rm -f scripts/*.pyc
