@@ -1,0 +1,27 @@
+<!--#config errmsg="[SSI FAIL!1]" -->
+<!--#config timefmt="%A %B %d %Y at %H:%M:%S" -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <!--#if expr="${page_title}" -->
+    <!--#set var="title" value="Escalope | ${page_title}" -->
+  <!--#else -->
+    <!--#set var="title" value="Escalope" -->
+  <!--#endif -->
+  <title><!--#echo var="title" --></title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/escalope.css">
+</head>
+<!--#if expr="${special_body}" -->
+<body id="<!--#echo var="special_body"-->">
+<!--#else -->
+<body>
+<!--#endif -->
+
+<h1><a href="/">Escalope</a></h1>
+<ul id="menu">
+  <li><a href="/perles">Perles</a></li>
+  <li><a href="/tronchi">Tronchi</a></li>
+  <li><a href="irc://irc.freenode.net/escalope">#escalope</a> @ <a href="http://freenode.net/">irc.freenode.net</a></li>
+</ul>
+<div id="page">
