@@ -46,4 +46,7 @@ a:
       margin: 0
       padding: 0
 
-
+#twitter:
+  width: 30%
+  margin-right: 52px
+  float: right

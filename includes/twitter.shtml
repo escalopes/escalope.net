@@ -1,0 +1,33 @@
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'list',
+  rpp: 30,
+  interval: 6000,
+  title: 'ce que twittent',
+  subject: 'les escalopes',
+  width: 'auto',
+  height: 300,
+  theme: {
+    shell: {
+      background: '#7b6151',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#7b6151'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: false,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    behavior: 'all'
+  }
+}).render().setList('webs', 'threesome').start();
+</script>
