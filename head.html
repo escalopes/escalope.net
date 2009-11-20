@@ -3,27 +3,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--#if expr="${page_title}" -->
-    <!--#set var="title" value="Escalope | ${page_title}" -->
-  <!--#else -->
-    <!--#set var="title" value="Escalope" -->
-  <!--#endif -->
-  <title><!--#echo var="title" --></title>
-  <link rel="stylesheet" type="text/css" href="stylesheets/escalope.css">
+  <title><!--#echo var="page_title" --> Escalope</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/escalope.css">
 </head>
-<!--#if expr="${special_body}" -->
-<body id="<!--#echo var="special_body"-->">
-<!--#else -->
 <body>
-<!--#endif -->
 
 <h1><a href="/">Escalope</a></h1>
 <ul id="menu">
   <li><strong><a href="/perles">Perles</a></strong></li>
   <li><strong><a href="/tronchi">Tronchi</a></strong></li>
-  <li><br /></li>
   <li><a href="http://escaline.org/" title="La ligne de commande du web">Escaline</a></li>
-  <li><br /></li>
   <li><a href="irc://irc.freenode.net/escalope">#escalope</a> @ <a href="http://freenode.net/">irc.freenode.net</a></li>
 </ul>
 <div id="page">

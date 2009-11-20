@@ -26,26 +26,17 @@ end
 users = users.sort_by { |id, user| user.nick.downcase }
 
 # Print HTML
-tronchi_html = ""
+puts open('head.html').read.gsub(/<title>.*<\/title>/, '<title>Tronchi</title>')
+puts "<div id='tronchi'><ul>"
 users.each do |id, user|
   nick = user.uri ? "<a class='url' href='#{user.uri}'>#{user.nick}</a>" : user.nick
-  tronchi_html << "<li class='vcard' id='#{id}'>"
-  tronchi_html << "  <p class='nick'>#{nick}</p>"
-  tronchi_html << "  <p><img width='160' class='photo' height='160' src='#{user.image}' alt='Photo de #{user.nick}' /></p>"
-  tronchi_html << name = user.name ? "  <p><span class='fn'>#{user.name}</span></p>" : "  <p>&nbsp;</p>"
-  tronchi_html << locality = user.locality ? "  <p class='adr'><span class='locality'>#{user.locality}</span>, <span class='country-name'>#{user.country}</span></p>" : ""
-  tronchi_html << "</li>\n"
+  puts "<li class='vcard' id='#{id}'>"
+  puts "  <p class='nick'>#{nick}</p>"
+  puts "  <p><img width='160' class='photo' height='160' src='#{user.image}' alt='Photo de #{user.nick}' /></p>"
+  puts user.name ? "  <p><span class='fn'>#{user.name}</span></p>" : "  <p>&nbsp;</p>"
+  puts user.locality ? "  <p class='adr'><span class='locality'>#{user.locality}</span>, <span class='country-name'>#{user.country}</span></p>" : ""
+  puts "</li>"
 end
+puts "</ul></div>"
+puts open('foot.html').read
 
-html = <<-EOF
-<!--#set var="page_title" value="Tronchi" -->
-<!--#include virtual="includes/head.shtml" -->
-<div id='tronchi'>
-  <ul>
-    #{tronchi_html}
-  </ul>
-</div>
-<!--#include virtual="includes/foot.shtml" -->
-EOF
-
-puts html

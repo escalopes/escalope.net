@@ -1,5 +1,6 @@
-perles.shtml
-tronchi.shtml
+index.html
+perles.html
+tronchi.html
+404.html
 *.pyc
 stylesheets/escalope.css
-images/tronches/*
