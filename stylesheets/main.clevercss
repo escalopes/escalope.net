@@ -48,5 +48,5 @@ a:
 
 #twitter:
   width: 30%
-  margin-right: 52px
+  margin: 52px 52px 0 0
   float: right
